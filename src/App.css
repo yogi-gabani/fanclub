@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
+main {
+  background: radial-gradient(60.95% 78.37% at 54.53% 42.49%, #1A0351 0%, #07071C 95.31%);
+  height: 8000px;
+}
+
+header {
+  max-width: 1585px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding-block: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
 }
-
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: clamp(50px, 4vw, 90px);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner {
+  max-width: 1585px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.title-wrapper {
+  position: relative;
+  width: 50%;
+}
+.blur-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 159, 63, 0.38);
+  filter: blur(400px);
+}
+.heading {
+  font-size: clamp(30px, 4vw, 90px);
+  max-width: 676px;
+}
+.para {
+  font-size: clamp(22px, 3vw, 28px);
+  color: white;
+  margin-bottom: 70px;
+  max-width: 580px;
+}
+.banner-background {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  height: clamp(300px, 70vw, 1390px);
+  top: -40px;
+}
+.football {
+  z-index: 1;
+  position: relative;
+  height: clamp(250px, 40vw, 876px);
+  margin-right: -50px;
+}
+
+.play-section {
+  text-align: center;
+  margin-top: 250px;
+}
+.heading2 {
+  font-size: clamp(30px, 3vw, 68px);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .banner {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .title-wrapper {
+    width: auto;
+    text-align: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .knowmore {
+    margin: 0 auto;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .heading {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .para {
+    margin-bottom: 30px;
+  }
+  .banner-background {
+    height: clamp(400px, 70vw, 1390px);
+  }
+  .image-wrapper {
+    position: relative;
+  }
+  .football {
+    height: clamp(250px, 50vw, 876px);
+    margin-right: 0;
+  }
 }
