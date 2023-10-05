@@ -42,7 +42,6 @@ header {
   font-size: clamp(22px, 3vw, 28px);
   color: white;
   margin-bottom: 70px;
-  max-width: 580px;
 }
 .banner-background {
   position: absolute;
@@ -60,13 +59,100 @@ header {
 
 .play-section {
   text-align: center;
-  margin-top: 250px;
+  margin-top: clamp(90px, 20vw, 250px);
 }
 .heading2 {
   font-size: clamp(30px, 3vw, 68px);
 }
 
+.image-desc {
+  max-width: 1585px;
+  margin: 0 auto;
+  margin-block: clamp(50px, 6vw, 90px);
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 5vw, 100px);
+}
+.banner-wrapper {
+  border: 1px solid rgba(107, 102, 246, 0.88);
+  border-radius: clamp(10px, 3vw, 15px);
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(15px, 3vw, 20px);
+  padding: 50px 20px;
+}
+.hero-card {
+  position: relative;
+  border-radius: clamp(15px, 3vw, 20px);
+  overflow: hidden;
+}
+.hero-card img {
+  border-radius: clamp(15px, 3vw, 20px);
+  width: 100%;
+  object-fit: cover;
+}
+.hero-card h4 {
+  font-size: clamp(8px, 2vw, 14px);
+  font-weight: 700;
+}
+.hero-card span {
+  font-size: clamp(8px, 2vw, 10px);
+  font-weight: 500;
+}
+.hero-card .card-title {
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background: rgba(107, 102, 246, 0.88);
+  width: 100%;
+  border-radius: 20px 0px 20px 20px;
+  padding: clamp(8px, 1.3vw, 20px);
+}
+.btn-yellow {
+  font-size: clamp(8px, 3vw, 14px);
+  font-weight: 700;
+  background: linear-gradient(180deg, #FFB132 0%, #FB7309 100%);
+  padding: 12px 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  border-radius: 15px 5px 0 0;
+}
 
+
+@media screen and (max-width: 1100px) {
+  .image-desc {
+    flex-direction: column;
+    width: 90%;
+  }
+  .banner-wrapper {
+    width: 95%;
+    max-width: 535px;
+  }
+  .hero-card, .hero-card img {
+    height: clamp(150px, 20vw, 200px);
+  }
+  .hero-card .card-title {
+    border-radius: 10px 0px 10px 10px;
+    height: clamp(50px, 5vw, 100px);
+  }
+  .hero-card h4 {
+    margin: 0;
+  }
+  .title-wrapper button {
+    margin: 0 auto;
+  }
+  .btn-yellow {
+    transform-origin: right bottom;
+    scale: 0.6;
+  }
+  .banner-wrapper {
+    padding: 10px;
+  }
+}
 @media screen and (max-width: 1000px) {
   .banner {
     flex-direction: column;
