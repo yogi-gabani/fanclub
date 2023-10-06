@@ -59,9 +59,10 @@
   display: block;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
   .md-none {
     display: block;
+    margin: 0;
   }
   
   .sm-none {
