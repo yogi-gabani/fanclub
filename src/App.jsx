@@ -35,9 +35,9 @@ function App() {
       footballImage.style.transform = `rotate(${deg}deg)`;
       let st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
-        deg = deg + 1;
+        deg = deg + 3;
       } else if (st < lastScrollTop) {
-        deg = deg - 1;
+        deg = deg - 3;
       }
       lastScrollTop = st <= 0 ? 0 : st;
     }
