@@ -50,7 +50,7 @@ function App() {
 
   return (
     <>
-      <main>
+      <main style={{ overflowX: 'hidden'}}>
         <header className='container'>
           <img className='logo' src={Logo} alt="logo" />
           <button className="btn md-none">Join The FC!</button>
